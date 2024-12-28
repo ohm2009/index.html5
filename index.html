@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 4-Month Anniversary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e8c7ff, #ffd1e8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #d60060;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .gift-area {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .gift-box {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #ff69b4, #d60060);
+            cursor: pointer;
+            transform: rotateX(15deg) rotateY(15deg) scale(1);
+            transition: transform 0.5s, background 0.5s, box-shadow 0.3s;
+            animation: spin 4s linear infinite;
+        }
+        .gift-box:hover {
+            transform: rotateX(15deg) rotateY(15deg) scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .gift-box:nth-child(2n) {
+            background: linear-gradient(145deg, #ffcc99, #ff9966);
+        }
+        .gift-box:nth-child(3n) {
+            background: linear-gradient(145deg, #99ccff, #6699ff);
+        }
+        .gift-box:nth-child(4n) {
+            background: linear-gradient(145deg, #ccff99, #99ff66);
+        }
+        @keyframes spin {
+            0% {
+                transform: rotateX(15deg) rotateY(15deg);
+            }
+            50% {
+                transform: rotateX(15deg) rotateY(195deg);
+            }
+            100% {
+                transform: rotateX(15deg) rotateY(375deg);
+            }
+        }
+        .gift-lid {
+            position: absolute;
+            width: 80px;
+            height: 20px;
+            background: #ffccd5;
+            top: -20px;
+            left: 0;
+            transition: transform 0.3s;
+            transform-origin: bottom;
+        }
+        .gift-body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+        }
+        .gift-box.open .gift-lid {
+            transform: rotateX(-90deg);
+        }
+        .hearts, .balloons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .heart, .balloon {
+            position: absolute;
+            background: #ff69b4;
+            animation: float 5s infinite ease-in-out;
+        }
+        .heart {
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+        .balloon {
+            width: 15px;
+            height: 25px;
+            background: #ffd1e8;
+            border-radius: 50% 50% 45% 45%;
+            animation: floatBalloon 6s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+        @keyframes floatBalloon {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+        .next-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .next-button:hover {
+            background: #d60060;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>4mแล้วนะอ้วนนน, หมายถึงเเก้มม 💖</h1>
+        <p>แก้มคือความสุขของเค้า ขอบคุณที่อยู่เคียงข้างเสมอ 🌸</p>
+        <p>รักแก้มที่สุดในโลกเลยยย 🥰</p>
+        <p>เค้ารักแก้มนะขอบคุณที่อยุ่กับเค้ามาตั้งนานนะไม่ว่าเค้าจะนิสัยไม่ดีชอบลามกเอาแต่ใจใส่เธอ</p>
+        <p>เธอก็ยังใจดีกับเค้า แต่เค้ารักเธอมากๆๆนะจะพยายามเป็นเด้กดีให้เธอมากขึ้น</p>
+        <p>ขอบคุณ4m นะเค้ารักเธอมากกกๆ เเละจะมากขึ้นทุกวินาทีเลยนะอ้วนอยุ่กับเค้านานๆนะๆ จุ๊บบบบบ</p>
+        <p>เค้ารักเธอมากกกก luv3000 eiei</p>
+        <div class="gift-area">
+            <div class="gift-box" onclick="openGift(this, 'รักแก้มมากที่สุดเลย 💖')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'ขอบคุณแก้มที่ทำให้ทุกวันพิเสดดด 💕')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'แก้มคือแรงบันดาลใจในทุกวานน 💖')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'รักแก้มเสมอ ไม่ว่าจะเกิดอะไรขึ้นอิอิ 💕')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'แก้มคือแสงสว่างในทุกความมืดดดด 💖')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'เค้าจะอยู่เคียงข้างแก้มเสมอ(มั้ง) 💕')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'แก้มคือคนพิเศษที่สุดในชีวิตเค้า 💖')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'ขอบคุณที่ทำให้ชีวิตเค้ามีความหมาย 💕')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'รักแก้มไม่มีวันหมด รึเปล่า555 💖')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+            <div class="gift-box" onclick="openGift(this, 'เค้าจะทำให้แก้มมีความสุขที่สุดด 💕')">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+            </div>
+        </div>
+        <button class="next-button" onclick="goToNextPage()">Next Page</button>
+    </div>
+    <div class="hearts"></div>
+    <div class="balloons"></div>
+    <script>
+        const heartContainer = document.querySelector('.hearts');
+        const balloonContainer = document.querySelector('.balloons');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+
+            const size = Math.random() * 10 + 10;
+            heart.style.width = `${size}px`;
+            heart.style.height = `${size}px`;
+
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+
+            heartContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove
